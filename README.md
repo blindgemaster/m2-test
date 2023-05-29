@@ -82,8 +82,11 @@ The web application fulfills the following requirements:
 
 
 2. Client-Side:
-   -    JavaScript Framework (React): The web application has been developed using React, a powerful JavaScript framework for building user interfaces. React's component-based architecture enables modular development and facilitates the creation of interactive and responsive UIs.
-    -	Form with Client-Side Validations: A basic form has been implemented within the web application, allowing users to input and submit data. Client-side validations have been incorporated to ensure data integrity. These validations prevent invalid or incomplete data submissions and provide real-time feedback to the users, enhancing the overall user experience.
-    -   Table-Based Component for Data Display and CRUD Operations: The web application includes a table-based component that displays data in a tabular format. This component enables users to view and interact with the data effectively. CRUD operations (Create, Read, Update, Delete) are supported, allowing users to add, edit, and remove data entries directly from the table. This functionality enhances the usability and convenience of managing data within the application.
-    -   UI Library: The implementation of the web application incorporates the use of a UI library to enhance the visual appearance and user experience.
+-   JavaScript Framework (React): The web application has been developed using React, a powerful JavaScript framework for building user interfaces. React's component-based architecture enables modular development and facilitates the creation of interactive and responsive UIs.
+
+-	Form with Client-Side Validations: A basic form has been implemented within the web application, allowing users to input and submit data. Client-side validations have been incorporated to ensure data integrity. These validations prevent invalid or incomplete data submissions and provide real-time feedback to the users, enhancing the overall user experience.
+
+-   Table-Based Component for Data Display and CRUD Operations: The web application includes a table-based component that displays data in a tabular format. This component enables users to view and interact with the data effectively. CRUD operations (Create, Read, Update, Delete) are supported, allowing users to add, edit, and remove data entries directly from the table. This functionality enhances the usability and convenience of managing data within the application.
+
+-   UI Library: The implementation of the web application incorporates the use of a UI library to enhance the visual appearance and user experience.
 
