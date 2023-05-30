@@ -76,7 +76,7 @@ const SidePanel = () => {
             <ListItemIcon>
               <Inbox />
             </ListItemIcon>
-            <ListItemText primary="Home" />
+            <ListItemText primary="Accounts" />
           </ListItem>
           <ListItem button onClick={openPopup}>
             <ListItemIcon>
