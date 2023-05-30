@@ -21,37 +21,6 @@ exports.getBookById = async (req, res) => {
     const book = await Books.findById(id);
     res.status(200).json({ book: book });
   } catch (error) {
-    console.log(error);
-    res.status(404).json({
-      message: "error",
-    });
-  }
-};
-exports.requestBook = async (req, res) => {
-  try {
-    const { bookId, userId, issueDays } = req.body;
-    const newBook = {
-      book: bookId,
-      issueDays: issueDays,
-    };
-
-    const user = await User.findByIdAndUpdate(
-      userId,
-      {
-        $push: { requestedBooks: newBook },
-      },
-      {
-        new: true,
-        runValidators: true,
-      }
-    ).populate("requestedBooks.book");
-    console.log(user.requestedBooks);
-
-    res.status(200).json({
-      message: "done",
-    });
-  } catch (error) {
-    console.log(error);
     res.status(404).json({
       message: "error",
     });
@@ -62,7 +31,7 @@ exports.deleteBook = async (req, res) => {
   try {
     const { bookId } = req.body;
     await Books.findByIdAndDelete(bookId);
-    res.status(200).json({
+    res.status(202).json({
       message: "done",
     });
   } catch (error) {

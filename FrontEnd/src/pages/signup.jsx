@@ -103,7 +103,6 @@ const Signup = () => {
               >
                 <option value="student">Student</option>
                 <option value="admin">Admin</option>
-                <option value="superadmin">Super Admin</option>
               </select>
             </div>
             <button type="submit" class="btn">
@@ -112,7 +111,7 @@ const Signup = () => {
             <div className="error">{error}</div>
           </form>
           <p>
-            Already have an account? <a href="/login" style={{ color: "#421010" }}>Log In</a>
+            Already have an account? <a href="/login">Log In</a>
           </p>
         </section>
       </main>

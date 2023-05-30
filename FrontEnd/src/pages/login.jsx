@@ -33,18 +33,12 @@ const Login = () => {
       }
     });
   };
-  const goBack = () => {
-    navigate(-1); // Navigate back to the previous page
-  };
   return (
     <>
       <Header />
       <main>
         <section class="login-section">
           <h2>Login</h2>
-          <button className="btn" onClick={goBack}>
-            Go Back
-          </button>
           <form
             onSubmit={(e) => {
               submit(e);

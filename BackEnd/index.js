@@ -41,8 +41,9 @@ mongoose.set("strictQuery", true);
 // Connecting Database
 mongoose
   .connect(
-    "mongodb+srv://quizcashapp:quizcashapp@quizcashapp.lqu9f.mongodb.net/?retryWrites=true&w=majority",
+    "mongodb+srv://khizarasim:Ilove%405cars@test.2c8vkkj.mongodb.net/?retryWrites=true&w=majority",
     {
+      useNewUrlParser: true,
       useUnifiedTopology: true,
     }
   )

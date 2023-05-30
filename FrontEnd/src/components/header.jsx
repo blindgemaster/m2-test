@@ -4,6 +4,7 @@ import { CgLogOut } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import { useState } from "react";
+import SidePanel from "../pages/sidepanel";
 
 const Header = ({ logout }) => {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ const Header = ({ logout }) => {
 
   return (
     <div className="header">
+      <SidePanel /> {/* Render the SidePanel component */}
       <h1 className="header-h1" onClick={() => navigate("/books")}>
         Library Management System
       </h1>
@@ -43,4 +45,3 @@ const Header = ({ logout }) => {
 };
 
 export default Header;
-

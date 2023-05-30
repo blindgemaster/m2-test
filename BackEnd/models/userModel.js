@@ -16,16 +16,6 @@ const userSchema = mongoose.Schema(
       enum: ["student", "admin", "superadmin"],
       default: "student",
     },
-
-    requestedBooks: [
-      {
-        book: {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "books",
-        },
-        issueDays: Number,
-      },
-    ],
   },
   {
     toJSON: { virtuals: true },

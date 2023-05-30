@@ -59,6 +59,7 @@ exports.login = async (req, res) => {
     console.log(user);
     // correctPassword is an instance method which will be available in all documents of a certain collection
     // user--> document
+    console.log(await user.correctPassword(password, user.password));
     if (!user || !(await user.correctPassword(password, user.password))) {
       res.status(404).json({
         message: "User does not exist",
@@ -97,7 +98,6 @@ exports.protect = async (req, res, next) => {
   res.locals.user = currentUser; // user--> this variable will be available for every pug templates
   next();
 };
-
 exports.isLoggedIn = async (req, res) => {
   try {
     const token = req.params.token;
@@ -105,9 +105,7 @@ exports.isLoggedIn = async (req, res) => {
     const decoded = await promisify(jwt.verify)(token, secretKey);
 
     // 2) Check if user still exists
-    const currentUser = await User.findById(decoded.id).populate(
-      "requestedBooks.book"
-    );
+    const currentUser = await User.findById(decoded.id);
     if (!currentUser) {
       res.status(404).json({ message: "User not found" });
     } else {
@@ -119,5 +117,6 @@ exports.isLoggedIn = async (req, res) => {
     res.status(404).json({
       message: err.message,
     });
+    console.log(err);
   }
 };
